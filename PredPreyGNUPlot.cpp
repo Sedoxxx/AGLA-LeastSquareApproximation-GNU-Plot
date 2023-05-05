@@ -479,13 +479,13 @@ int32_t main(){
         fprintf(pipe, "plot '-' using 1:2 t 'victims' with lines, '-' using 1:2 t 'killers' with lines ");
         /*
          * In case you want a figure in good manual proportions, not automatic by GNU plot for my model:
-          250
+          150
           50
-          0.666
-          0.07
-          0.404
-          0.02
-          128
+          0.65
+          0.0075
+          0.45
+          0.0045
+          64
           512
           you can use this instead of the previous command
           fprintf(pipe, "plot [0:120] [0:320] '-' using 1:2 t 'victims' with lines, '-' using 1:2 t 'killers' with lines ");
@@ -512,8 +512,8 @@ int32_t main(){
             double y = victims[i];
             fprintf(pipe, "%f\t%f\n", x, y);
         }
-        fprintf(pipe, "%s\n", "e");
-         */
+        fprintf(pipe, "%s\n", "e");*/
+
         fflush(pipe);
 #ifdef WIN32
         _pclose(pipe);
